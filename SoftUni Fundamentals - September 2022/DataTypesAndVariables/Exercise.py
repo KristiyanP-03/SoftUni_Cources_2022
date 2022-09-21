@@ -1,5 +1,4 @@
 # zad 1
-
 # number1 = int(input())
 # number2 = int(input())
 # number3 = int(input())
@@ -61,5 +60,3 @@
 #         continue
 #     total_took += take
 # print(total_took)
-
-
