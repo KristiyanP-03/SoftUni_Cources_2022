@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75b28380-4078-413d-8311-573ffdd6195d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/8_DataTypesAndVariables_Lab.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1 Concat Names.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2 Convert Meters to Kilometers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3 Pounds to Dollars.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4 Centuries to Minutes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5 Special Numbers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6 Next Happy Year.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataTypesAndVariables/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DataTypesAndVariables/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataTypesAndVariables/Lab.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DataTypesAndVariables/Lab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1 Concat Names.py" beforeDir="false" afterPath="$PROJECT_DIR$/1. Concat Names.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 Convert Meters to Kilometers.py" beforeDir="false" afterPath="$PROJECT_DIR$/2. Convert Meters to Kilometers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3 Pounds to Dollars.py" beforeDir="false" afterPath="$PROJECT_DIR$/3. Pounds to Dollars.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4 Centuries to Minutes.py" beforeDir="false" afterPath="$PROJECT_DIR$/4. Centuries to Minutes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5 Special Numbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/5. Special Numbers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6 Next Happy Year.py" beforeDir="false" afterPath="$PROJECT_DIR$/6. Next Happy Year.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +34,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../9_DataTypesAndVariables_Exercise" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -88,6 +80,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
