@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ce3b7e6-c1a9-45cb-8dea-d6c808ee299a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../SoftUni Basic - June 2022/PrimerenIzpit_2/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SoftUni Basic - June 2022/PrimerenIzpit_2/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="75b28380-4078-413d-8311-573ffdd6195d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/8_DataTypesAndVariables_Lab.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Exercise.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/More_Exercise.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zadachi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataTypesAndVariablesUPR/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataTypesAndVariablesUPR/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataTypesAndVariablesUPR/.idea/DataTypesAndVariablesUPR.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataTypesAndVariablesUPR/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataTypesAndVariablesUPR/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataTypesAndVariablesUPR/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataTypesAndVariablesUPR/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataTypesAndVariablesUPR/Zadachi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataTypesAndVariablesUPR/main.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1 Concat Names.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2 Convert Meters to Kilometers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3 Pounds to Dollars.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4 Centuries to Minutes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 Special Numbers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6 Next Happy Year.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DataTypesAndVariables/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DataTypesAndVariables/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DataTypesAndVariables/Lab.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DataTypesAndVariables/Lab.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="2F5w1kecOod7ez7pbC6HjJEcLNG" />
+  <component name="ProjectId" id="2F6FAkmPr7WBF0sbdpc1MoyQrVY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -46,11 +43,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="DataTypesAndVariables" />
+      <module name="8_DataTypesAndVariables_Lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -74,11 +70,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1ce3b7e6-c1a9-45cb-8dea-d6c808ee299a" name="Changes" comment="" />
-      <created>1663795041192</created>
+      <changelist id="75b28380-4078-413d-8311-573ffdd6195d" name="Changes" comment="" />
+      <created>1663804485735</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1663795041192</updated>
+      <updated>1663804485735</updated>
     </task>
     <servers />
   </component>
