@@ -1,21 +1,3 @@
-
-
-# zad 4
-
-
-# zad 5
-
-
-# # zad 6
-
-
-# zad 7
-
-
-# zad 8
-
-
-# zad 9
 while True:
     name = input()
     if name == "Welcome!":
