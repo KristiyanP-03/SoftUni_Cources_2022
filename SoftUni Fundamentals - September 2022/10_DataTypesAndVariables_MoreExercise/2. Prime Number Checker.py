@@ -1,5 +1,12 @@
 number = int(input())
-if number % 2 == 0 and number != 2 or number % 3 == 0 and number != 3 or number < 1:
+factors = []
+if number <= 1:
     print("False")
 else:
-    print("True")
+    for factor in range(2, number):
+        if number % factor == 0:
+            factors.append(factor)
+    if len(factors) == 0:
+        print("True")
+    else:
+        print("False")
