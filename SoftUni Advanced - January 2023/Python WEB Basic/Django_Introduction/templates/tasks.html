@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+
+    </head>
+    <body>
+
+        <h1>{{ task }}</h1>
+
+        {% if dynamic_tasks %}
+
+            {% for task in dynamic_tasks %}
+                <div>
+                {{ task.id }}. {{ task.task_title }}:
+                {{ task.task_text }}
+                </div>
+            {% endfor %}
+
+        {% else %}
+
+            <p>There are no created tasks!</p>
+
+        {% endif %}
+
+    </body>
+</html>

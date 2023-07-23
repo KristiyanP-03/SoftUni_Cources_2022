@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0cdbdf44-63ea-42a1-8eaf-ce4af8fe8f35" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/15_Iterators_and_Generators_Lab/1. Custom Range.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/15_Iterators_and_Generators_Lab/2. Reverse Iter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/15_Iterators_and_Generators_Lab/3. Vowels.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/15_Iterators_and_Generators_Lab/4. Squares.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/15_Iterators_and_Generators_Lab/5. Generator Range.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/15_Iterators_and_Generators_Lab/6. Reverse string.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/16_Iterators_and_Generators_Exr/1. Take Skip.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/16_Iterators_and_Generators_Exr/2. Dictionary Iterator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/16_Iterators_and_Generators_Exr/3. Countdown Iterator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/16_Iterators_and_Generators_Exr/4. Sequence Repeat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/16_Iterators_and_Generators_Exr/5. Take Halves.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/16_Iterators_and_Generators_Exr/6. Fibonacci Generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/16_Iterators_and_Generators_Exr/7. Reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/16_Iterators_and_Generators_Exr/8. Prime Numbers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/16_Iterators_and_Generators_Exr/9. Possible permutations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/17_Decorators_Lab/1. Number Increment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/17_Decorators_Lab/2. Vowel Filter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/17_Decorators_Lab/3. Even Numbers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/17_Decorators_Lab/4. Multiply.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/19_Testing_Lab/1. Test Worker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/19_Testing_Lab/2. Test Cat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_1/project/booths/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_1/project/booths/booth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_1/project/booths/open_booth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_1/project/booths/private_booth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_1/project/delicacies/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_1/project/delicacies/christmas_pastry_shop_app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_1/project/delicacies/delicacy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_1/project/delicacies/gingerbread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_1/project/delicacies/stolen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_1/project/test/project/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_1/project/test/project/test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_1/project/test/project/test/test_toy_store.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_1/project/test/project/toy_store.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_2/project/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_2/project/test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_2/project/test/test_truck_driver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_2/project/truck_driver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_3/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_3/project/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_3/project/band.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_3/project/band_members/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_3/project/band_members/drummer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_3/project/band_members/guitarist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_3/project/band_members/musician.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_3/project/band_members/singer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_3/project/concert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Exam_Prep_3/project/concert_tracker_app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Regular_Exam/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Regular_Exam/project/robots/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Regular_Exam/project/robots/base_robot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Regular_Exam/project/robots/female_robot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Regular_Exam/project/robots/male_robot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Regular_Exam/project/robots_managing_app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Regular_Exam/project/services/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Regular_Exam/project/services/base_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Regular_Exam/project/services/main_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python OOP/Regular_Exam/project/services/secondary_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Django_Templates/Django_Templates/django_template_app/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GamesPlay_Project/apps/game/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GamesPlay_Project/apps/user_profile/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Models_in_Django_Part1/Models_in_Django_Part1/web/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python OOP/14_SOLID_Exr.zip" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2Q6BPORn6KwwGLjq6EwTsnWiaYv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="DataBase_Test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0cdbdf44-63ea-42a1-8eaf-ce4af8fe8f35" name="Changes" comment="" />
+      <created>1684664126851</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684664126851</updated>
+      <workItem from="1684667187611" duration="25000" />
+      <workItem from="1684667230666" duration="15000" />
+      <workItem from="1684940342770" duration="28000" />
+      <workItem from="1684940409876" duration="204000" />
+      <workItem from="1684940629367" duration="725000" />
+      <workItem from="1684941445534" duration="23000" />
+      <workItem from="1684941481572" duration="88000" />
+      <workItem from="1686065060577" duration="87000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
