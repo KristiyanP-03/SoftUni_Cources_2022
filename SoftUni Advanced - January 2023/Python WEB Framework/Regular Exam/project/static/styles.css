@@ -1,0 +1,61 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set minimum height of the body to full viewport height */
+}
+
+header {
+    background-color: #E25822; /* Orange color for the header */
+    color: #fff;
+    padding: 20px;
+}
+
+.logo {
+    margin-bottom: 20px; /* Extra space for the logo */
+}
+
+.logo h1 {
+    font-size: 36px; /* Increase the size of the logo text */
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    flex: 1; /* Allow main content to take remaining space */
+    display: flex;
+    flex-direction: column-reverse; /* Stack new posts under the last one */
+}
+
+.post {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px; /* Add space between individual user content */
+}
+
+footer {
+    background-color: #E25822; /* Orange color for the footer */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}

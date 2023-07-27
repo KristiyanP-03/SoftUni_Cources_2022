@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking Site</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Add your logo here -->
+            <h1>Cooking Site</h1>
+        </div>
+        <nav>
+            <!-- Add your navigation links here -->
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- User-generated content (reptingles like YouTube videos) -->
+        <div class="content">
+            <div class="post">
+                <!-- Add content from users here -->
+                <h2>User Post 1</h2>
+                <p>This is the content of User Post 1.</p>
+            </div>
+            <div class="post">
+                <h2>User Post 2</h2>
+                <p>This is the content of User Post 2.</p>
+            </div>
+            <!-- Add more user posts here -->
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+        <p>&copy; 2023 Cooking Site. All rights reserved.</p>
+    </footer>
+</body>
+</html>
