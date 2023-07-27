@@ -10,39 +10,56 @@
 <body>
     <header>
         <div class="logo">
-            <!-- Add your logo here -->
-            <h1>Cooking Site</h1>
+            <img src="{% static 'logo.png' %}" alt="Logo">
         </div>
-        <nav>
-            <!-- Add your navigation links here -->
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Recipes</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="top">
+            <div class="title">
+                <h1>Cooking Site</h1>
+                
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">register</a></li>
+                    <li><a href="#">log in</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <!-- User-generated content (reptingles like YouTube videos) -->
         <div class="content">
-            <div class="post">
-                <!-- Add content from users here -->
-                <h2>User Post 1</h2>
-                <p>This is the content of User Post 1.</p>
+            <div class="post-wrapper">
+                <div class="post">
+                    <h2>User Post 1</h2>
+                    <p>This is the content of User Post 1.</p>
+                </div>
+                <div class="post">
+                    <h2>User Post 2</h2>
+                    <p>This is the content of User Post 2.</p>
+                </div>
+                <div class="post">
+                    <h2>User Post 3</h2>
+                    <p>This is the content of User Post 3.</p>
+                </div>
+                <div class="post">
+                    <h2>User Post 4</h2>
+                    <p>This is the content of User Post 4.</p>
+                </div>
+                <div class="post">
+                    <h2>User Post 5</h2>
+                    <p>This is the content of User Post 5.</p>
+                </div>
+                <!-- Add more user posts here -->
             </div>
-            <div class="post">
-                <h2>User Post 2</h2>
-                <p>This is the content of User Post 2.</p>
-            </div>
-            <!-- Add more user posts here -->
         </div>
     </main>
 
     <footer>
-        <!-- Footer content -->
+        <!-- Footer -->
         <p>&copy; 2023 Cooking Site. All rights reserved.</p>
     </footer>
 </body>
 </html>
+
