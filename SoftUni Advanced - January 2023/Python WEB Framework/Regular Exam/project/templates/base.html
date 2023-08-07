@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/css/style.css"/>
+        <title>Foodie Haven Cooking Site</title>
+    </head>
+
+    <body>
+
+        <nav>
+            <ul>
+                <a href="/"><img src="{% static "/images/logo.png"  %}" alt="logo"></a>
+                <li class="title"><a href="{% url "recipes" %}" style="color:#f1f1e8;">Recipes</a></li>
+
+                {% if user.is_authenticated %}
+                    <li class="title"><a href="{% url "user recepies" %}" style="color:#f1f1e8;">Kitchen</a></li>
+                    <li class="title"><a href="{% url "profile details" %}" style="color:#f1f1e8;">Profile</a></li>
+                {% else %}
+                    <li class="title"><a href="{% url "register" %}" style="color: cornflowerblue;">Register</a></li>
+                    <li class="title"><a href="{% url "login" %}" style="color:#f1f1e8;">Log in</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+
+        {% block content %}
+        {% endblock %}
+
+        <footer>
+
+            <p>&copy; 2023 Foodie Haven. All rights reserved.</p>
+            {% if user.is_authenticated and user.is_staff %}
+                <p><a href="{% url 'admin:index' %}" style="color:#f1f1e8;">@ Foodie Haven Administration</a><p>
+            {% endif %}
+        </footer>
+    </body>
+
+</html>

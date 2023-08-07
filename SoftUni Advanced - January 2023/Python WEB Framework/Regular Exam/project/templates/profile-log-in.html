@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load static %} <!-- Load the static template tags -->
+
+<div class="form-container"> <!-- Apply the form-container class here -->
+
+    <div id="fixing_top"></div>
+
+    <h1>Login</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+        <h6>No account? <a href="{% url "register" %}" style="color:cornflowerblue;">Register</a></h6>
+    </form>
+
+    <div id="fixing_bottom"></div>
+
+</div>
+
+{% endblock %}

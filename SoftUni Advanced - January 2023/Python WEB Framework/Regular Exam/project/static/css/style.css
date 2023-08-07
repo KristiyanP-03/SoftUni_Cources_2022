@@ -1,0 +1,469 @@
+/* Navigation */
+/* ============================================================================================ */
+body {
+    background: #eeeeee;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: -20px;
+    padding-left: 400px;
+    background: #272438;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav ul li,
+nav ul img,
+nav ul li a {
+    list-style: none;
+    text-decoration: none;
+    padding: 5px;
+    font-weight: normal;
+}
+
+nav ul img {
+    width: 40px;
+    height: auto;
+}
+
+nav ul li.title {
+    font-size: 25px;
+}
+
+nav ul li.title a:hover {
+    color: coral !important;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+div.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+div.item {
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+div.item h2 {
+    text-align: center;
+    color: black;
+}
+
+div.item img.detail-img {
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.item div.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.item div.time img {
+    width: 32px;
+    height: auto;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+div.recipe-info {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: black;
+}
+
+div.buttons-container {
+    display: block;
+    float: right;
+    margin: 10px;
+}
+
+div.buttons-container .button,
+input[type="submit"] {
+    padding: 10px;
+    width: 100px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+div.buttons-container .button:hover,
+input[type="submit"] {
+    cursor: pointer;
+}
+
+div.buttons-container .button.edit,
+input[type="submit"] {
+    background: #d38226;
+}
+
+div.buttons-container .button.edit:hover,
+input[type="submit"]:hover {
+    background: #e78f2a;
+}
+
+div.buttons-container .button.detail {
+    background: #496d95;
+}
+
+div.buttons-container .button.detail:hover {
+    background: #5780af;
+}
+
+div.buttons-container .button.delete {
+    background: #c52f2f;
+}
+
+div.buttons-container .button.delete:hover {
+    background: #d63333;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 18px;
+    text-align: center;
+    margin: 5px;
+}
+
+form input,
+textarea {
+    padding: 7px;
+    border: 2px solid #f1f1e8;
+    border-radius: 2px;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+form input[type="submit"] {
+    margin-top: 15px;
+    width: 25%;
+}
+
+#fixing_top {margin-bottom: 100px;}
+#fixing_bottom {margin-top: 100px;}
+
+footer {
+    background-color: rgb(38, 33, 48);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+}
+footer a {
+    font-weight: normal;
+}
+
+/* forms */
+/* ============================================================================================ */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="email"] {
+    width: 100%;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container button[type="submit"] {
+    width: 100%;
+    background-color: coral;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-container label {
+    text-align: left;
+}
+
+.form-container .checkbox-label {
+    display: flex;
+    align-items: center;
+}
+
+.form-container input[type="checkbox"] {
+    margin-right: -100px;
+    margin-left: -90px;
+}
+
+
+/*Profile details*/
+/* ============================================================================================ */
+.profile-container {
+    margin-left: 450px;
+    margin-right: 450px;
+    border: 2px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-picture img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+
+.profile-details {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-button {
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+}
+
+.edit-button {
+    background-color: coral;
+    color: white;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+}
+/*Delete page*/
+/* ============================================================================================ */
+.profile-delete-container {
+    margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid red;
+    padding: 20px;
+    text-align: center;
+    max-width: 500px;
+}
+
+.profile-delete-title {
+    font-size: 24px;
+    color: red;
+}
+
+.profile-delete-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.profile-cancel-button {
+    background-color: lightblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/*Edit profile*/
+/* ============================================================================================ */
+.profile-edit-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.profile-edit-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.profile-edit-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-edit-form label {
+  margin-bottom: 5px;
+}
+
+.profile-edit-form input{
+    width: 99%;
+}
+
+
+.profile-edit-form input,
+.profile-edit-form select {
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.profile-edit-form button {
+  padding: 10px 15px;
+  background-color: coral;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-edit-form button:hover {
+  background-color: lightcoral;
+}
+.profile-edit-form textarea {
+    width: 99%;
+  padding: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+.profile-edit-form .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-edit-form .btn-cancel {
+  padding: 10px 15px;
+  background-color: white;
+  border: 1px solid #4CAF50;
+  border-radius: 4px;
+  color: #4CAF50;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.profile-edit-form .btn-cancel:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+/*Recepies*/
+/* ============================================================================================ */
+.user_recepies_container {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.user_recepies_container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.user_recepies_container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user_recepies_container li {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.user_recepies_container p {
+    font-size: 18px;
+    color: #888;
+}
+
+.user_recepies_container .button {
+    display: inline-block;
+    background-color: coral;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.centered_message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

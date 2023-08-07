@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load static %}
+
+<div class="form-container">
+
+    <div id="fixing_top"></div>
+
+    <h1>Register Profile</h1>
+    <form method="post">
+
+        {% csrf_token %}
+        {{ form.username.label_tag }} {{ form.username }}
+        {{ form.password.label_tag }} {{ form.password }}
+        {{ form.repeat_password.label_tag }} {{ form.repeat_password }}
+        {{ form.email.label_tag }} {{ form.email }}
+
+        <div class="checkbox-label">
+             {{ form.agree_privacy.label_tag }}{{ form.agree_privacy }}
+        </div>
+        <div class="checkbox-label">
+             {{ form.agree_show_profile.label_tag }}{{ form.agree_show_profile }}
+        </div>
+        <div class="checkbox-label">
+             {{ form.agree_rules.label_tag }}{{ form.agree_rules }}
+        </div>
+
+
+
+        <button type="submit">Register</button>
+        <h6>Already have an account? <a href="{% url "login" %}" style="color:cornflowerblue;">Log in</a></h6>
+    </form>
+
+    <div id="fixing_bottom"></div>
+
+</div>
+
+{% endblock %}

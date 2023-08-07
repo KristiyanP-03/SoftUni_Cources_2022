@@ -1,65 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cooking Site</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="{% static 'logo.png' %}" alt="Logo">
-        </div>
-        <div class="top">
-            <div class="title">
-                <h1>Cooking Site</h1>
-                
+{% extends "base.html" %}
+{% block content %}
+
+    <div id="fixing_top"></div>
+
+    <div class="container">
+
+        <h1>My Recipes</h1>
+        <h2>There are no recipes.</h2>
+        <div class="items-container">
+
+            <div class="item">
+                <h2>Cardamom Maple Salmon (Edit)</h2>
+                <img class="detail-img" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1122494.jpg&amp;w=596&amp;h=596&amp;c=sc&amp;poi=face&amp;q=85" alt="recipe-image">
+                <div class="recipe-info">
+                    Stir salt, paprika, cardamom, coriander, and black pepper together in a bowl. Add oil and maple syrup and stir until evenly combined. Preheat a non-stick frying pan over medium-high heat, about 350 degrees F (175 degrees C). Dredge salmon pieces through
+                    the maple syrup mixture until evenly coated on all sides. Cook salmon in the preheated pan until fish flakes easily with a fork, 5 to 7 minutes per side.
+                </div>
+                <div class="buttons-container">
+                    <a class="button detail" href="./details.html">Details</a>
+                    <a class="button edit" href="./edit.html">Edit</a>
+                    <a class="button delete" href="./delete.html">Delete</a>
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#">register</a></li>
-                    <li><a href="#">log in</a></li>
-                    <li><a href="#">Recipes</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main>
-        <div class="content">
-            <div class="post-wrapper">
-                <div class="post">
-                    <h2>User Post 1</h2>
-                    <p>This is the content of User Post 1.</p>
+            <div class="item">
+                <h2>Cardamom Maple Salmon (Edit)</h2>
+                <img class="detail-img" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1122494.jpg&amp;w=596&amp;h=596&amp;c=sc&amp;poi=face&amp;q=85" alt="recipe-image">
+                <div class="recipe-info">
+                    Stir salt, paprika, cardamom, coriander, and black pepper together in a bowl. Add oil and maple syrup and stir until evenly combined. Preheat a non-stick frying pan over medium-high heat, about 350 degrees F (175 degrees C). Dredge salmon pieces through
+                    the maple syrup mixture until evenly coated on all sides. Cook salmon in the preheated pan until fish flakes easily with a fork, 5 to 7 minutes per side.
                 </div>
-                <div class="post">
-                    <h2>User Post 2</h2>
-                    <p>This is the content of User Post 2.</p>
+                <div class="buttons-container">
+                    <a class="button detail" href="./details.html">Details</a>
+                    <a class="button edit" href="./edit.html">Edit</a>
+                    <a class="button delete" href="./delete.html">Delete</a>
                 </div>
-                <div class="post">
-                    <h2>User Post 3</h2>
-                    <p>This is the content of User Post 3.</p>
-                </div>
-                <div class="post">
-                    <h2>User Post 4</h2>
-                    <p>This is the content of User Post 4.</p>
-                </div>
-                <div class="post">
-                    <h2>User Post 5</h2>
-                    <p>This is the content of User Post 5.</p>
-                </div>
-                <!-- Add more user posts here -->
             </div>
+
+            <div class="item">
+                <h2>Cardamom Maple Salmon (Edit)</h2>
+                <img class="detail-img" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1122494.jpg&amp;w=596&amp;h=596&amp;c=sc&amp;poi=face&amp;q=85" alt="recipe-image">
+                <div class="recipe-info">
+                    Stir salt, paprika, cardamom, coriander, and black pepper together in a bowl. Add oil and maple syrup and stir until evenly combined. Preheat a non-stick frying pan over medium-high heat, about 350 degrees F (175 degrees C). Dredge salmon pieces through
+                    the maple syrup mixture until evenly coated on all sides. Cook salmon in the preheated pan until fish flakes easily with a fork, 5 to 7 minutes per side.
+                </div>
+                <div class="buttons-container">
+                    <a class="button detail" href="./details.html">Details</a>
+                    <a class="button edit" href="./edit.html">Edit</a>
+                    <a class="button delete" href="./delete.html">Delete</a>
+                </div>
+            </div>
+
         </div>
-    </main>
+    </div>
 
-    <footer>
-        <!-- Footer -->
-        <p>&copy; 2023 Cooking Site. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+    <div id="fixing_bottom"></div>
 
+{% endblock %}

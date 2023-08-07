@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+    {% load static %}
+
+<div id="fixing_top"></div>
+
+    <div class="profile-container">
+
+        <div class="profile-picture">
+            <img src="
+                {% if profile.profile_picture %}
+                    {{ profile.profile_picture }}
+                {% else %}
+                    {% static "/images/df_profile_pic.png"  %}
+                {% endif %}">
+        </div>
+
+        <div class="profile-details">
+            <h2>{{ profile.username }}</h2>
+            {% if profile.first_name or profile.last_name %}
+                <p><b>Name:</b> {{ profile.first_name }} {{ profile.last_name }}</p>
+            {% endif %}
+            <p><b>Email:</b> {{ profile.email }}</p>
+        </div>
+        <div class="bio-box">
+                {% if profile.bio %}
+                    <p><b>Bio:</b> {{ profile.bio }}</p>
+                {% endif %}
+        </div>
+
+    </div>
+
+
+    <div class="button-container">
+        <a class="logout-button" href="{% url 'logout' %}">Log Out</a>
+        <a class="edit-button" href="{% url 'profile edit' %}">Edit</a>
+        <a class="delete-button" href="{% url 'profile delete' %}">Delete Profile</a>
+    </div>
+
+<div id="fixing_bottom"></div>
+
+{% endblock %}

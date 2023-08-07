@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="fixing_top"></div>
+
+    <div class="user_recepies_container">
+        {% if recipes %}
+            <h2>Your Recipes</h2>
+            <ul>
+                {% for recipe in recipes %}
+                    <li>{{ recipe.title }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No recipes have been created</p>
+        {% endif %}
+
+        <a href="{% url 'index' %}" class="button">+</a>
+    </div>>
+
+    <div id="fixing_bottom"></div>
+
+{% endblock %}
