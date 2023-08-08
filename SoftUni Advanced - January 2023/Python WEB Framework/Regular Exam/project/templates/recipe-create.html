@@ -1,15 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div id="fixing_top"></div>
+    <div id="recipe-form-top"></div>
 
-    <h2>Create Recipe</h2>
-    <form method="post" class="recipe-form">
+    <h2 class="recipe-title">Create Recipe</h2>
+    <form method="post" class="custom-recipe-form">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="submit-button">Create Recipe</button>
+
+        <div class="button-container">
+            <button type="submit" class="custom-submit-button">Create Recipe</button>
+            <button type="button" class="custom-cancel-button">
+                <a class="custom-cancel-button" href="{% url 'user recipes' %}">Cancel</a>
+            </button>
+        </div>
     </form>
 
-    <div id="fixing_bottom"></div>
+    <div id="recipe-form-bottom"></div>
 
 {% endblock %}

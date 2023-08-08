@@ -87,8 +87,10 @@ class DeleteProfileView(LoginRequiredMixin, DeleteView):
 
 #Recepies view
 #==================================================================================================
+@login_required
 def user_recipes(request):
-    recipes = RecipeModel.objects.all()
+    user = request.user
+    recipes = RecipeModel.objects.filter(chef=user)
     return render(request, 'user-recipes.html', {'recipes': recipes})
 
 def recipe_create(request):
