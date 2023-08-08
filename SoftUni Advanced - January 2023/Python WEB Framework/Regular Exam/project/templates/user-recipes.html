@@ -8,13 +8,16 @@
             <ul>
                 {% for recipe in recipes %}
                     <li>{{ recipe.title }}</li>
+                    <li>{{ recipe.chef }}</li>
+                    <li><img src="{{ recipe.picture }}" alt="{{ recipe.title }}"></li>
+                    <li>{{ recipe.type_category.title }}</li>
                 {% endfor %}
             </ul>
         {% else %}
             <p>No recipes have been created</p>
         {% endif %}
 
-        <a href="{% url 'index' %}" class="button">+</a>
+        <a href="{% url 'recipe create' %}" class="button">+</a>
     </div>>
 
     <div id="fixing_bottom"></div>

@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView, LogoutView
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import *
 from django.urls import reverse_lazy
 from django.contrib.auth import logout, login, authenticate, get_user_model
@@ -87,18 +87,26 @@ class DeleteProfileView(LoginRequiredMixin, DeleteView):
 
 #Recepies view
 #==================================================================================================
-def user_recepies(request):
+def user_recipes(request):
     recipes = RecipeModel.objects.all()
-    return render(request, 'user-recepies.html', {'recipes': recipes})
+    return render(request, 'user-recipes.html', {'recipes': recipes})
 
-def recepie_create(request):
+def recipe_create(request):
+    if request.method == 'POST':
+        form = RecipeForm(request.POST)
+        if form.is_valid():
+            form.save(user=request.user)
+            return redirect('user recipes')
+    else:
+        form = RecipeForm()
+
+    return render(request, 'recipe-create.html', {'form': form})
+
+def recipe_details(request):
     pass
 
-def recepie_details(request):
+def recipe_edit(request):
     pass
 
-def recepie_edit(request):
-    pass
-
-def recepie_delete(request):
+def recipe_delete(request):
     pass

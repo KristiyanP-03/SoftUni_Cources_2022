@@ -17,9 +17,9 @@ urlpatterns = [
     path('profile/delete/', DeleteProfileView.as_view(), name="profile delete"),
 
     # PK recipes
-    path('kitchen/', user_recepies, name="user recepies"),
-    path('kitchen/write/', recepie_create, name="recepie create"),
-    path('kitchen/<int:pk>/details/', recepie_details, name="recepie details"),
-    path('kitchen/<int:pk>/edit/', recepie_edit, name="recepie edit"),
-    path('kitchen/<int:pk>/delete/', recepie_delete, name="recepie delete"),
+    path('kitchen/', user_recipes, name="user recipes"),
+    path('kitchen/write/', recipe_create, name="recipe create"),
+    path('kitchen/<int:pk>/details/', recipe_details, name="recipe details"),
+    path('kitchen/<int:pk>/edit/', recipe_edit, name="recipe edit"),
+    path('kitchen/<int:pk>/delete/', recipe_delete, name="recipe delete"),
 ]

@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import GroupAdmin
 
-from apps.FoodieHaven_app.models import ProfileModel
+from apps.FoodieHaven_app.models import ProfileModel, RecipeModel
 
 
 class ProfileModelAdmin(admin.ModelAdmin):
@@ -27,3 +27,4 @@ class ProfileModelAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(ProfileModel, ProfileModelAdmin)
+admin.site.register(RecipeModel)

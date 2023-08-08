@@ -4,9 +4,11 @@ from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
-from .models import ProfileModel
+from .models import ProfileModel, RecipeModel
 
 
+# Profile Forms
+#=====================================================================================================
 class RegistrationForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
     repeat_password = forms.CharField(widget=forms.PasswordInput(), label="Repeat Password")
@@ -48,3 +50,25 @@ class ProfileEditForm(forms.ModelForm):
         model = ProfileModel
         fields = ['first_name', 'last_name', 'email', 'profile_picture', 'bio']
 
+
+# Recepie Forms
+#=====================================================================================================
+class RecipeForm(forms.ModelForm):
+    class Meta:
+        model = RecipeModel
+        fields = [
+            'title',
+            'picture',
+            'time_category',
+            'type_category',
+            'description',
+            'ingredients',
+            'instructions',
+            'time_to_cook',
+        ]
+
+    def save(self, user, *args, **kwargs):
+        instance = super(RecipeForm, self).save(commit=False)
+        instance.chef = user
+        instance.save()
+        return instance
