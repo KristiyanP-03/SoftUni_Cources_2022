@@ -420,58 +420,56 @@ a {
 
 /*User Recipes*/
 /* ============================================================================================ */
+/* Style for the container of user recipes */
 .user_recepies_container {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
+    text-align: center; /* Center the content horizontally */
+    margin: auto;
+    padding: 20px; /* Add some padding to the container */
+}
+
+/* Style for the container of recipe boxes */
+.recipe_boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the boxes horizontally */
+}
+
+/* Style for each individual recipe box */
+.recipe_box {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
     text-align: center;
 }
 
-.user_recepies_container h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
+.recipe_image {
+    max-width: 100%;
+    height: auto;
 }
 
-.user_recepies_container ul {
-    list-style: none;
-    padding: 0;
+.button_box {
+    width: 300px; /* Match the width of recipe boxes */
+    text-align: center;
+    margin: 10px;
 }
 
-.user_recepies_container li {
-    font-size: 18px;
-    margin-bottom: 8px;
-    color: #555;
-}
-
-.user_recepies_container p {
-    font-size: 18px;
-    color: #888;
-}
-
-.user_recepies_container .button {
-    display: inline-block;
+.button {
+    display: block;
+    width: 30px;
+    height: 30px;
     background-color: coral;
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
     text-decoration: none;
-    font-size: 18px;
-    margin-top: 15px;
-}
-
-.centered_message {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 20px;
 }
 /*Recipe Create*/
 /* ============================================================================================ */
-/* Improved styling */
 #recipe-form-top,
 #recipe-form-bottom {
-    height: 20px; /* Add some spacing at the top and bottom */
+    height: 20px;
 }
 
 .recipe-title {
@@ -487,7 +485,6 @@ a {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .custom-recipe-form label {
@@ -522,14 +519,12 @@ select {
     border-radius: 4px;
     background-color: #fff;
     color: #333;
-    transition: border-color 0.3s ease;
     appearance: none;
     background-size: 20px;
     padding-right: 30px;
     cursor: pointer;
 }
 
-/* Center the select element */
 .custom-select-container {
     display: flex;
     justify-content: center;

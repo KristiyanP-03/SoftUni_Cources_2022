@@ -4,6 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render, redirect
+from django.utils.decorators import method_decorator
 from django.views.generic import *
 from django.urls import reverse_lazy
 from django.contrib.auth import logout, login, authenticate, get_user_model
@@ -43,6 +44,7 @@ class RegisterView(CreateView):
             login(self.request, user)
 
         return response
+
 class LoginView(LoginView):
     template_name = 'profile-log-in.html'
     redirect_authenticated_user = True

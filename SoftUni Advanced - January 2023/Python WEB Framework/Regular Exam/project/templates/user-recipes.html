@@ -5,21 +5,26 @@
     <div class="user_recepies_container">
         {% if recipes %}
             <h2>Your Recipes</h2>
-            <ul>
+            <div class="recipe_boxes">
                 {% for recipe in recipes %}
-                    <li>{{ recipe.title }}</li>
-                    <li>{{ recipe.chef }}</li>
-                    <li><img src="{{ recipe.picture }}" alt="{{ recipe.title }}"></li>
-                    <li>{{ recipe.type_category.title }}</li>
+                    <div class="recipe_box">
+                        <img class="recipe_image" src="{{ recipe.picture }}" alt="{{ recipe.title }}">
+                        <h3>{{ recipe.title }}</h3>
+                        <p>Category: {{ recipe.type_category.title }}</p>
+                        <a href="/" class="edit_button">details</a>
+                    </div>
                 {% endfor %}
-            </ul>
+                <div class="add_button_box">
+                    <a href="{% url 'recipe create' %}" class="button">+</a>
+                </div>
+            </div>
         {% else %}
             <p>No recipes have been created</p>
+            <div class="add_button_box">
+                <a href="{% url 'recipe create' %}" class="button">+</a>
+            </div>
         {% endif %}
-
-        <a href="{% url 'recipe create' %}" class="button">+</a>
-    </div>>
+    </div>
 
     <div id="fixing_bottom"></div>
-
 {% endblock %}
