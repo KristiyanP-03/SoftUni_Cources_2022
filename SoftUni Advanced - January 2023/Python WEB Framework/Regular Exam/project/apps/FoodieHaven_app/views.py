@@ -18,14 +18,8 @@ from apps.FoodieHaven_app.models import *
 #==================================================================================================
 #Main view
 def index(request):
-    return render(request, "index.html")
-
-
-
-#Public view
-def recipes(request):
-    pass
-
+    recipes = RecipeModel.objects.all()
+    return render(request, 'index.html', {'recipes': recipes})
 
 
 
@@ -108,8 +102,21 @@ def recipe_create(request):
 
 def recipe_details(request, pk):
     recipe = get_object_or_404(RecipeModel, pk=pk)
-    context = {'recipe': recipe}
+    comments = Comment.objects.filter(recipe=recipe)
+    comment_form = CommentForm()
+
+    if request.method == 'POST':
+        comment_form = CommentForm(request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.recipe = recipe
+            comment.author = request.user
+            comment.save()
+            return redirect('recipe details', pk=pk)
+
+    context = {'recipe': recipe, 'comments': comments, 'comment_form': comment_form}
     return render(request, 'recipe-details.html', context)
+
 
 def recipe_edit(request, pk):
     recipe = get_object_or_404(RecipeModel, pk=pk)
@@ -125,5 +132,12 @@ def recipe_edit(request, pk):
     context = {'form': form, 'is_edit': True}
     return render(request, 'recipe-edit.html', context)
 
-def recipe_delete(request):
-    pass
+def recipe_delete(request, pk):
+    recipe = RecipeModel.objects.get(pk=pk)
+
+    if request.method == 'POST':
+        recipe.delete()
+        return redirect('user recipes')
+
+    context = {'recipe': recipe}
+    return render(request, 'recipe-delete.html', context)

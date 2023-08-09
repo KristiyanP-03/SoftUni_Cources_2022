@@ -4,12 +4,21 @@ from django.core.exceptions import ValidationError
 from django.core.validators import MinLengthValidator
 from django.db import models
 
+from project import settings
+
+
 # Create your models here.
 
 
 # Profile Model
 # #=====================================================================================================================
+def no_spaces(input):
+    if " " in input:
+        raise ValidationError("You can't use white spaces")
+
 class ProfileModel(AbstractUser):
+    username = models.CharField(verbose_name="Username", unique=True, validators=[no_spaces])
+    email = models.EmailField(verbose_name="Email", unique=True)
     profile_picture = models.URLField(verbose_name="Profile Picture (URL)", blank=True, null=True)
     bio = models.TextField(verbose_name="Bio", blank=True, null=True)
 
@@ -61,3 +70,14 @@ class RecipeModel(models.Model):
 
     def __str__(self):
         return self.title
+
+# Comment Model
+#=====================================================================================================================
+class Comment(models.Model):
+    recipe = models.ForeignKey('RecipeModel', on_delete=models.CASCADE)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    text = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Comment by {self.author} on {self.recipe}"

@@ -12,7 +12,6 @@
         <nav>
             <ul>
                 <a href="/"><img src="{% static "/images/logo.png"  %}" alt="logo"></a>
-                <li class="title"><a href="{% url "recipes" %}" style="color:#f1f1e8;">Recipes</a></li>
 
                 {% if user.is_authenticated %}
                     <li class="title"><a href="{% url "user recipes" %}" style="color:#f1f1e8;">Kitchen</a></li>

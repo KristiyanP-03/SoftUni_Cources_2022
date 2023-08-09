@@ -2,11 +2,8 @@ from django.urls import path, include
 from apps.FoodieHaven_app.views import *
 
 urlpatterns = [
-    #Main Page
+    #Main/Public Page
     path('', index, name="index"),
-
-    #Public Page
-    path('recipes/', recipes, name="recipes"),
 
     #Profile URLs
     path('profile/register/', RegisterView.as_view(), name='register'),

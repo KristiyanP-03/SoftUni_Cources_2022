@@ -4,12 +4,13 @@ from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
-from .models import ProfileModel, RecipeModel
+from .models import *
 
 
 # Profile Forms
 #=====================================================================================================
 class RegistrationForm(forms.ModelForm):
+    username = forms.CharField(validators=[no_spaces])
     password = forms.CharField(widget=forms.PasswordInput())
     repeat_password = forms.CharField(widget=forms.PasswordInput(), label="Repeat Password")
     agree_privacy = forms.BooleanField(label="I agree with the privacy policy")
@@ -19,7 +20,7 @@ class RegistrationForm(forms.ModelForm):
     class Meta:
         model = ProfileModel
         fields = [
-            'password', 'repeat_password', 'username', 'email', 'agree_privacy', 'agree_show_profile', 'agree_rules'
+            'username', 'password', 'repeat_password', 'username', 'email', 'agree_privacy', 'agree_show_profile', 'agree_rules'
         ]
 
     def clean(self):
@@ -72,3 +73,8 @@ class RecipeForm(forms.ModelForm):
         instance.chef = user
         instance.save()
         return instance
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['text']
