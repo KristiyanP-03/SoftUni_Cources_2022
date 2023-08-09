@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView, LogoutView
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.utils.decorators import method_decorator
 from django.views.generic import *
 from django.urls import reverse_lazy
@@ -106,11 +106,24 @@ def recipe_create(request):
 
     return render(request, 'recipe-create.html', {'form': form})
 
-def recipe_details(request):
-    pass
+def recipe_details(request, pk):
+    recipe = get_object_or_404(RecipeModel, pk=pk)
+    context = {'recipe': recipe}
+    return render(request, 'recipe-details.html', context)
 
-def recipe_edit(request):
-    pass
+def recipe_edit(request, pk):
+    recipe = get_object_or_404(RecipeModel, pk=pk)
+
+    if request.method == 'POST':
+        form = RecipeForm(request.POST, instance=recipe)
+        if form.is_valid():
+            form.save()
+            return redirect('user recipes')
+    else:
+        form = RecipeForm(instance=recipe)
+
+    context = {'form': form, 'is_edit': True}
+    return render(request, 'recipe-edit.html', context)
 
 def recipe_delete(request):
     pass

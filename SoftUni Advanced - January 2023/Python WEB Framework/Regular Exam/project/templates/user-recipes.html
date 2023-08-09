@@ -10,8 +10,9 @@
                     <div class="recipe_box">
                         <img class="recipe_image" src="{{ recipe.picture }}" alt="{{ recipe.title }}">
                         <h3>{{ recipe.title }}</h3>
-                        <p>Category: {{ recipe.type_category.title }}</p>
-                        <a href="/" class="edit_button">details</a>
+                        <p>For time of the day: {{ recipe.get_time_category_display }}</p>
+                        <p>Type: {{ recipe.get_type_category_display }}</p>
+                        <a href="{% url 'recipe details' recipe.pk %}" class="edit_button">details</a>
                     </div>
                 {% endfor %}
                 <div class="add_button_box">

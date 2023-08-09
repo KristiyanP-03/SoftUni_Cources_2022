@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="recipe-container">
+        <div class="recipe-top">
+            <h1>{{ recipe.title }}</h1>
+            <p><img class="recipe-image" src="{{ recipe.picture }}" alt="{{ recipe.title }}"></p>
+            <p>{{ recipe.description }}</p>
+            <p class="time-category">Time Category: {{ recipe.get_time_category_display }}</p>
+            <p class="type-category">Type Category: {{ recipe.get_type_category_display }}</p>
+            <p class="time-cook">Time to Cook: {{ recipe.get_time_to_cook_display }}</p>
+        </div>
+
+        <div class="recipe-bottom">
+            <h2 class="section-title">Ingredients</h2>
+            <p class="ingredients">{{ recipe.ingredients }}</p>
+
+            <h2 class="section-title">Instructions</h2>
+            <p class="instructions">{{ recipe.instructions }}</p>
+        </div>
+        <div class="buttons">
+            <a href="{% url 'user recipes' %}" class="btn-back">Back</a>
+            <a href="{% url 'recipe edit' recipe.pk %}" class="btn-edit">Edit</a>
+            <a href="/" class="btn-delete">Delete</a>
+
+        </div>
+    </div>
+
+{% endblock %}
+

@@ -49,7 +49,7 @@ class RecipeModel(models.Model):
         ('120', '2 hours or more'),
     )
 
-    title = models.CharField(max_length=200, validators=[validate_unique_title], verbose_name="Recipe Title")
+    title = models.CharField(max_length=20, validators=[validate_unique_title], verbose_name="Recipe Title")
     picture = models.URLField(verbose_name="Picture (URL)", blank=True, null=True)
     chef = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, verbose_name="Chef")
     time_category = models.CharField(max_length=20, choices=TIME_CATEGORY_CHOICES, verbose_name="Time Category")
