@@ -16,7 +16,6 @@ class RegistrationForm(forms.ModelForm):
     agree_privacy = forms.BooleanField(label="I agree with the privacy policy")
     agree_show_profile = forms.BooleanField(label="I agree for my profile to be shown")
     agree_rules = forms.BooleanField(label="I agree to the site rules")
-
     class Meta:
         model = ProfileModel
         fields = [
@@ -40,19 +39,28 @@ class RegistrationForm(forms.ModelForm):
             instance.save()
         return instance
 
+
+
+# Login Forms
+#=====================================================================================================
 class LoginForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):
         super(LoginForm, self).__init__(*args, **kwargs)
         self.fields['username'].label = 'Username'
         self.fields['password'].label = 'Password'
 
+
+
+# Profile Edit Forms
+#=====================================================================================================
 class ProfileEditForm(forms.ModelForm):
     class Meta:
         model = ProfileModel
         fields = ['first_name', 'last_name', 'email', 'profile_picture', 'bio']
 
 
-# Recepie Forms
+
+# Recepie Create/Edit Forms
 #=====================================================================================================
 class RecipeForm(forms.ModelForm):
     class Meta:
@@ -74,7 +82,19 @@ class RecipeForm(forms.ModelForm):
         instance.save()
         return instance
 
+
+
+# Comment Forms
+#=====================================================================================================
 class CommentForm(forms.ModelForm):
     class Meta:
-        model = Comment
+        model = CommentModel
         fields = ['text']
+
+
+#Report User Form
+#=======================================================================================================================
+class ReportUserForm(forms.ModelForm):
+    class Meta:
+        model = ReportUserModel
+        fields = ['description']

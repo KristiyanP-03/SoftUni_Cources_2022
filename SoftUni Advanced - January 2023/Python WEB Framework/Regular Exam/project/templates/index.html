@@ -6,6 +6,7 @@
     <div class="user_recepies_container">
         {% if recipes %}
             <div class="recipe_boxes">
+
                 {% for recipe in recipes %}
                     <div class="recipe_box">
                         <p>Chef: {{ recipe.chef }}</p>
@@ -16,6 +17,7 @@
                         <a href="{% url 'recipe details' recipe.pk %}" class="edit_button">details</a>
                     </div>
                 {% endfor %}
+
             </div>
         {% else %}
             <p>No recipes have been created</p>

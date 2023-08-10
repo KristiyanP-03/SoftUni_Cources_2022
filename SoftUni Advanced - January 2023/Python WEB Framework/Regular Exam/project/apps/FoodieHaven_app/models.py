@@ -28,7 +28,7 @@ class ProfileModel(AbstractUser):
 
 
 # Recepie Model
-#=====================================================================================================================
+#=======================================================================================================================
 def validate_unique_title(input):
     if RecipeModel.objects.filter(title=input).exists():
         raise ValidationError("A recipe with this title already exists.")
@@ -67,13 +67,14 @@ class RecipeModel(models.Model):
     ingredients = models.TextField(validators=[cant_be_empty_string], verbose_name="Ingredients")
     instructions = models.TextField(verbose_name="Instructions")
     time_to_cook = models.CharField(max_length=3, choices=TIME_TO_COOK_CHOICES, verbose_name="Time to Cook")
+    total_rating = models.PositiveIntegerField(default=0, verbose_name="Total Rating Score")
 
     def __str__(self):
         return self.title
 
 # Comment Model
-#=====================================================================================================================
-class Comment(models.Model):
+#=======================================================================================================================
+class CommentModel(models.Model):
     recipe = models.ForeignKey('RecipeModel', on_delete=models.CASCADE)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     text = models.TextField()
@@ -81,3 +82,23 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment by {self.author} on {self.recipe}"
+
+#Report User Model
+#=======================================================================================================================
+
+class ReportUserModel(models.Model):
+    reported_user = models.CharField(max_length=200)
+    description = models.TextField()
+    reporter = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Report by {self.reporter} on {self.recipe}"
+
+
+#Rate Recipe Model
+#=======================================================================================================================
+class RecipeRatingModel(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    recipe = models.ForeignKey(RecipeModel, on_delete=models.CASCADE)
+    rating = models.PositiveIntegerField(choices=[(i, str(i)) for i in range(11)], verbose_name="Rating")

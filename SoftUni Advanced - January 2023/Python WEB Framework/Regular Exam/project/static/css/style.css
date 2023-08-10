@@ -590,6 +590,180 @@ a {
     background-color: #dc3545;
 }
 
-.btn-back {
-    background-color: powderblue;
+.btn-neutralize {
+    margin-left: 1100px;
+    background-color: gray;
+    color: black;
+}
+
+/*Recipe rate section*/
+/* ============================================================================================ */
+
+.rating-form {
+    margin-top: 20px;
+}
+
+.rating-label {
+    margin-left: 550px;
+    font-weight: bold;
+}
+
+#rating {
+    margin-left: 600px;
+    margin-right: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.rate-button {
+    margin-left: 600px;
+    margin-right: 50px;
+    padding: 5px 10px;
+    background-color: crimson;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.total-rating {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/*Recipe comment section*/
+/* ============================================================================================ */
+.comment-section {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.comment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comment-list li {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.comment-list p.comment-time {
+    color: #888;
+    font-size: 12px;
+}
+
+.comment-form {
+    margin-top: 20px;
+}
+
+.comment-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.comment-form textarea {
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+.comment-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+/*Reports History*/
+/* ============================================================================================ */
+.report-container {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.report-box {
+    border: 2px solid red;
+    padding: 10px;
+    background-color: #fff;
+
+    margin-top: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+
+
+/*Report User*/
+/* ============================================================================================ */
+.report-page {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   margin: 0;
+   background-color: #f7f7f7;
+}
+
+.report-form-container {
+   width: 800px;
+   padding: 20px;
+   background-color: #ffffff;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+
+
+.report-label {
+   font-weight: bold;
+   margin-bottom: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+.report-submit-button {
+   padding: 10px;
+   background-color: #007bff;
+   color: #ffffff;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+   margin-bottom: 10px;
+}
+
+.report-submit-button:hover {
+   background-color: #0056b3;
+}
+
+.report-buttons {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.report-cancel-button {
+   padding: 10px;
+   background-color: transparent;
+   color: #007bff;
+   text-decoration: none;
+   border-radius: 3px;
+}
+
+.report-cancel-button:hover {
+   background-color: rgba(0, 123, 255, 0.1);
 }

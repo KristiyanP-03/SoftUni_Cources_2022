@@ -19,4 +19,8 @@ urlpatterns = [
     path('kitchen/<int:pk>/details/', recipe_details, name="recipe details"),
     path('kitchen/<int:pk>/edit/', recipe_edit, name="recipe edit"),
     path('kitchen/<int:pk>/delete/', recipe_delete, name="recipe delete"),
+
+
+    path('kitchen/<int:pk>/report/', report_user, name='report_user'),
+    path('reporsts/', reports, name="reports")
 ]

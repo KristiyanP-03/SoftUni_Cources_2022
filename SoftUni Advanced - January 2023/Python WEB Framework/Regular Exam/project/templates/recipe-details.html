@@ -18,42 +18,93 @@
             <h2 class="section-title">Instructions</h2>
             <p class="instructions">{{ recipe.instructions }}</p>
         </div>
-        {% if user.is_authenticated and user == recipe.chef %}
-            <div class="buttons">
-                <a href="{% url 'user recipes' %}" class="btn-back">Back</a>
-                <a href="{% url 'recipe edit' recipe.pk %}" class="btn-edit">Edit</a>
-                <a href="{% url 'recipe delete' recipe.pk %}" class="btn-delete">Delete</a>
+            {% if user.is_authenticated and user == recipe.chef %}
+                <div class="buttons">
+                    <a href="{% url 'recipe edit' recipe.pk %}" class="btn-edit">Edit</a>
+                    <a href="{% url 'recipe delete' recipe.pk %}" class="btn-delete">Delete</a>
 
-            </div>
-        {% endif %}
-
+                </div>
+            {% endif %}
 
 
+            {% if user != recipe.chef and user.is_authenticated and not user_has_rated %}
 
-            <div class="comment-section">
-                <h2 class="section-title">Comments</h2>
-                {% if comments %}
-                    <ul class="comment-list">
-                        {% for comment in comments %}
-                            <li>
-                                <p>{{ comment.author }}:</p>
-                                <p>{{ comment.text }}</p>
-                                <p class="comment-time">{{ comment.created_at }}</p>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% else %}
-                    <p>No comments yet.</p>
-                {% endif %}
-            </div>
-
-            <div class="comment-section">
-                <h3>Add a Comment:</h3>
-                <form method="post">
+                <form method="post" class="rating-form">
                     {% csrf_token %}
-                    {{ comment_form.as_p }}
-                    <button type="submit">Submit Comment</button>
+                    <label for="rating" class="rating-label">Rate the Recipe:</label>
+                    <select name="rating" id="rating">
+
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+
+
+                    </select>
+                    <button type="submit" name="rate_recipe" class="rate-button">Rate</button>
                 </form>
+
+            {% endif %}
+
+            <p class="total-rating">Total Rating Score: {{ recipe.total_rating }}</p>
+
+
+
+
+            <div class="comment-section">
+
+                <h2 class="section-title">Comments</h2>
+
+                    {% if comments %}
+                        <ul class="comment-list">
+                            {% for comment in comments %}
+                                <li>
+                                    <p><b>{{ comment.author }}</b>: <i>{{ comment.text }}</i></p>
+                                    <p class="comment-time">{{ comment.created_at }}</p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+
+                    {% else %}
+                        <p>No comments yet.</p>
+                    {% endif %}
+
+                    {% if user.is_authenticated %}
+                        <h3>Add a Comment:</h3>
+
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ comment_form.as_p }}
+                            <button type="submit">Submit Comment</button>
+                        </form>
+
+
+                        {% if user != recipe.chef %}
+                            <div class="report-button">
+                                <a href="{% url 'report_user' recipe.chef.pk %}" class="btn-report">Report</a>
+                            </div>
+                        {% endif %}
+
+
+
+                    {% else %}
+                        <h3>
+                            <a href="{% url "login" %}">Log in</a> or <a href="{% url "register" %}" style="color: cornflowerblue;">register</a> to comment!
+                        </h3>
+                    {% endif %}
+
+
+                    {% if user.is_authenticated and user.is_staff %}
+                        <a href="{% url 'recipe delete' recipe.pk %}" class="btn-neutralize">neutralize</a>
+                    {% endif %}
+
             </div>
 
 

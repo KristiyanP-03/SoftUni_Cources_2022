@@ -22,7 +22,6 @@ def index(request):
     return render(request, 'index.html', {'recipes': recipes})
 
 
-
 #Profile views
 #==================================================================================================
 class RegisterView(CreateView):
@@ -102,8 +101,13 @@ def recipe_create(request):
 
 def recipe_details(request, pk):
     recipe = get_object_or_404(RecipeModel, pk=pk)
-    comments = Comment.objects.filter(recipe=recipe)
+    comments = CommentModel.objects.filter(recipe=recipe)
     comment_form = CommentForm()
+
+    user_has_rated = False
+
+    if request.user.is_authenticated:
+        user_has_rated = RecipeRatingModel.objects.filter(user=request.user, recipe=recipe).exists()
 
     if request.method == 'POST':
         comment_form = CommentForm(request.POST)
@@ -114,7 +118,15 @@ def recipe_details(request, pk):
             comment.save()
             return redirect('recipe details', pk=pk)
 
-    context = {'recipe': recipe, 'comments': comments, 'comment_form': comment_form}
+        if not user_has_rated and 'rate_recipe' in request.POST:
+            rating = int(request.POST['rating'])
+            recipe_rating = RecipeRatingModel(user=request.user, recipe=recipe, rating=rating)
+            recipe_rating.save()
+            recipe.total_rating += rating
+            user_has_rated = True
+            recipe.save()
+
+    context = {'recipe': recipe, 'comments': comments, 'comment_form': comment_form, 'user_has_rated': user_has_rated}
     return render(request, 'recipe-details.html', context)
 
 
@@ -132,6 +144,8 @@ def recipe_edit(request, pk):
     context = {'form': form, 'is_edit': True}
     return render(request, 'recipe-edit.html', context)
 
+
+
 def recipe_delete(request, pk):
     recipe = RecipeModel.objects.get(pk=pk)
 
@@ -141,3 +155,29 @@ def recipe_delete(request, pk):
 
     context = {'recipe': recipe}
     return render(request, 'recipe-delete.html', context)
+
+
+
+
+
+def report_user(request, pk):
+    User = get_user_model()
+    reported_user = get_object_or_404(User, pk=pk)
+
+    if request.method == 'POST':
+        form = ReportUserForm(request.POST)
+        if form.is_valid():
+            report = form.save(commit=False)
+            report.reported_user = reported_user.username
+            report.reporter = request.user
+            report.save()
+            return redirect('index')
+    else:
+        form = ReportUserForm()
+
+    return render(request, 'report-user.html', {'form': form, 'reported_user': reported_user})
+
+
+def reports(request):
+    reports = ReportUserModel.objects.all()
+    return render(request, 'reports.html', {'reports': reports})

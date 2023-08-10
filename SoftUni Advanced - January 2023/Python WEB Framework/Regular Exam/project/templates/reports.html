@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h1>Reports History</h1>
+
+    {% if reports %}
+
+        <ul class="report-list">
+            {% for report in reports reversed %}
+                <li class="report-container">
+                    <div class="report-box">
+                        <p><b>Reporter:</b> {{ report.reporter }}</p>
+                        <p><b>Reported User:</b> {{ report.reported_user }}</p>
+                        <p><b>Description:</b> {{ report.description }}</p>
+                        <p><b>Date:</b> {{ report.created_at }}</p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+
+
+    {% else %}
+        <p>No reports available.</p>
+    {% endif %}
+
+
+{% endblock %}

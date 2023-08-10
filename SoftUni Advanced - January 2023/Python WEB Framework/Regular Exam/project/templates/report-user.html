@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="report-page">
+        <div class="report-form-container">
+            <h1>Report User</h1>
+
+            <p class="report-label">Reporting user: {{ reported_user.username }}</p>
+
+            <form class="report-form" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <div class="report-buttons">
+                    <a href="{% url 'index' %}" class="report-cancel-button">Cancel</a>
+                    <button type="submit" class="report-submit-button">Send to Admins</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
