@@ -18,7 +18,7 @@
         {% if recipes %}
             <div class="recipe_boxes">
 
-                {% for recipe in recipes %}
+                {% for recipe in recipes reversed %}
                     <div class="recipe_box">
                         <p>Chef: {{ recipe.chef }}</p>
                         <img class="recipe_image" src="{{ recipe.picture }}" alt="{{ recipe.title }}">

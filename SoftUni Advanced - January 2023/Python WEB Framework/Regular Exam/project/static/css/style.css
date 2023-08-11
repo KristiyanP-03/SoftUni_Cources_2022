@@ -252,7 +252,6 @@ footer a {
     flex-direction: column;
     align-items: center;
     background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .profile-picture img {
@@ -269,7 +268,6 @@ footer a {
     text-align: center;
 }
 
-/* Buttons */
 .button-container {
     display: flex;
     justify-content: center;
@@ -388,7 +386,7 @@ a {
 .profile-edit-form textarea {
     width: 99%;
   padding: 8px;
-  margin-bottom: 30px;
+  margin-bottom: -50px;
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: none;
