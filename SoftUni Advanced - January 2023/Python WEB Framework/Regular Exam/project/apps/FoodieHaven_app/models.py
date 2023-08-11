@@ -7,17 +7,24 @@ from django.db import models
 from project import settings
 
 
+from django.contrib.auth.models import Group, Permission
+
+
+
 # Create your models here.
 
 
 # Profile Model
 # #=====================================================================================================================
+def username_length(value):
+    if len(value) < 2:
+        raise ValidationError("Username must be at least 2 characters long.")
 def no_spaces(input):
     if " " in input:
         raise ValidationError("You can't use white spaces")
 
 class ProfileModel(AbstractUser):
-    username = models.CharField(verbose_name="Username", unique=True, validators=[no_spaces])
+    username = models.CharField(verbose_name="Username", unique=True, validators=[no_spaces, username_length])
     email = models.EmailField(verbose_name="Email", unique=True)
     profile_picture = models.URLField(verbose_name="Profile Picture (URL)", blank=True, null=True)
     bio = models.TextField(verbose_name="Bio", blank=True, null=True)
@@ -77,7 +84,7 @@ class RecipeModel(models.Model):
 class CommentModel(models.Model):
     recipe = models.ForeignKey('RecipeModel', on_delete=models.CASCADE)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    text = models.TextField()
+    text = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -88,17 +95,28 @@ class CommentModel(models.Model):
 
 class ReportUserModel(models.Model):
     reported_user = models.CharField(max_length=200)
-    description = models.TextField()
+    description = models.TextField(blank=True, null=True)
     reporter = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Report by {self.reporter} on {self.recipe}"
+        return f"Report by {self.reporter}"
 
 
-#Rate Recipe Model
+
+class AnnouncementModel(models.Model):
+    message = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.message[:50]
+
+
+
+# Groups
 #=======================================================================================================================
-class RecipeRatingModel(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    recipe = models.ForeignKey(RecipeModel, on_delete=models.CASCADE)
-    rating = models.PositiveIntegerField(choices=[(i, str(i)) for i in range(11)], verbose_name="Rating")
+def create_roles():
+    site_admin_group, created = Group.objects.get_or_create(name='Site Admin')
+    super_admin_group, created = Group.objects.get_or_create(name='Super Admin')
+
+create_roles()

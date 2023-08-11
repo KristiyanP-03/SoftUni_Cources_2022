@@ -20,6 +20,12 @@
                     {% if user.is_authenticated and user.is_staff %}
                         <p><a href="{% url 'reports' %}" style="color:darkorange;">! reports !</a><p>
                     {% endif %}
+                    {% if user.is_authenticated and user.is_superuser %}
+                        <p><a href="{% url 'announcement' %}" style="color:firebrick;">announcement</a><p>
+                        {% if super_admin_group in user.groups.all %}
+                            <p>Welcome, Super Admin!</p>
+                        {% endif %}
+                    {% endif %}
 
 
                 {% else %}
@@ -37,7 +43,7 @@
         <footer>
 
             <p>&copy; 2023 Foodie Haven. All rights reserved.</p>
-            {% if user.is_authenticated and user.is_staff %}
+            {% if user.is_authenticated and user.is_superuser %}
                 <p><a href="{% url 'admin:index' %}" style="color:#f1f1e8;">@ Foodie Haven Administration</a><p>
             {% endif %}
         </footer>

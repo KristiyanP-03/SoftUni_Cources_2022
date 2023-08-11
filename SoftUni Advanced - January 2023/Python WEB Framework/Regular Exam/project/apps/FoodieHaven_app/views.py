@@ -1,8 +1,9 @@
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView, LogoutView
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils.decorators import method_decorator
 from django.views.generic import *
@@ -14,20 +15,30 @@ from apps.FoodieHaven_app.models import *
 
 
 # Create your views here.
-#--------------------------------------------------------------------------------------------------
-#==================================================================================================
-#Main view
+#-----------------------------------------------------------------------------------------------------------------------
+
+# #Main view
+#=======================================================================================================================
 def index(request):
+    announcement = AnnouncementModel.objects.last()
     recipes = RecipeModel.objects.all()
-    return render(request, 'index.html', {'recipes': recipes})
+    return render(request, 'index.html', {'recipes': recipes, 'announcement': announcement})
 
 
-#Profile views
-#==================================================================================================
+
+
+#Profile Register / Log In / Log Out Views
+#=======================================================================================================================
+
 class RegisterView(CreateView):
     form_class = RegistrationForm
     template_name = 'profile-register.html'
     success_url = reverse_lazy('index')
+
+    def get(self, request, *args, **kwargs):
+        if self.request.user.is_authenticated:
+            return HttpResponseRedirect(reverse_lazy('index'))
+        return super().get(request, *args, **kwargs)
 
     def form_valid(self, form):
         response = super().form_valid(form)
@@ -38,12 +49,20 @@ class RegisterView(CreateView):
 
         return response
 
+
+
 class LoginView(LoginView):
     template_name = 'profile-log-in.html'
     redirect_authenticated_user = True
 
+
+
+
 class LogoutView(LogoutView):
     next_page = reverse_lazy('index')
+
+
+
 
 class ProfileView(LoginRequiredMixin, DetailView):
     template_name = 'profile-details.html'
@@ -52,6 +71,9 @@ class ProfileView(LoginRequiredMixin, DetailView):
 
     def get_object(self, queryset=None):
         return self.request.user
+
+
+
 
 
 class EditProfileView(LoginRequiredMixin, UpdateView):
@@ -64,6 +86,10 @@ class EditProfileView(LoginRequiredMixin, UpdateView):
 
     def get_success_url(self):
         return reverse_lazy('profile details')
+
+
+
+
 
 class DeleteProfileView(LoginRequiredMixin, DeleteView):
     model = ProfileModel
@@ -80,13 +106,21 @@ class DeleteProfileView(LoginRequiredMixin, DeleteView):
 
 
 
-#Recepies view
-#==================================================================================================
+
+
+#Recepies Views
+#=======================================================================================================================
+
+
 @login_required
 def user_recipes(request):
     user = request.user
     recipes = RecipeModel.objects.filter(chef=user)
     return render(request, 'user-recipes.html', {'recipes': recipes})
+
+
+
+
 
 def recipe_create(request):
     if request.method == 'POST':
@@ -99,15 +133,14 @@ def recipe_create(request):
 
     return render(request, 'recipe-create.html', {'form': form})
 
+
+
+
+
 def recipe_details(request, pk):
     recipe = get_object_or_404(RecipeModel, pk=pk)
     comments = CommentModel.objects.filter(recipe=recipe)
     comment_form = CommentForm()
-
-    user_has_rated = False
-
-    if request.user.is_authenticated:
-        user_has_rated = RecipeRatingModel.objects.filter(user=request.user, recipe=recipe).exists()
 
     if request.method == 'POST':
         comment_form = CommentForm(request.POST)
@@ -118,16 +151,11 @@ def recipe_details(request, pk):
             comment.save()
             return redirect('recipe details', pk=pk)
 
-        if not user_has_rated and 'rate_recipe' in request.POST:
-            rating = int(request.POST['rating'])
-            recipe_rating = RecipeRatingModel(user=request.user, recipe=recipe, rating=rating)
-            recipe_rating.save()
-            recipe.total_rating += rating
-            user_has_rated = True
-            recipe.save()
-
-    context = {'recipe': recipe, 'comments': comments, 'comment_form': comment_form, 'user_has_rated': user_has_rated}
+    context = {'recipe': recipe,'comments': comments,'comment_form': comment_form}
     return render(request, 'recipe-details.html', context)
+
+
+
 
 
 def recipe_edit(request, pk):
@@ -136,13 +164,16 @@ def recipe_edit(request, pk):
     if request.method == 'POST':
         form = RecipeForm(request.POST, instance=recipe)
         if form.is_valid():
-            form.save()
+            form.save(user=request.user)
             return redirect('user recipes')
     else:
         form = RecipeForm(instance=recipe)
 
     context = {'form': form, 'is_edit': True}
     return render(request, 'recipe-edit.html', context)
+
+
+
 
 
 
@@ -158,8 +189,8 @@ def recipe_delete(request, pk):
 
 
 
-
-
+# Report User Views
+#=======================================================================================================================
 def report_user(request, pk):
     User = get_user_model()
     reported_user = get_object_or_404(User, pk=pk)
@@ -178,6 +209,34 @@ def report_user(request, pk):
     return render(request, 'report-user.html', {'form': form, 'reported_user': reported_user})
 
 
+
+
+def is_staff(user):
+    return user.is_staff
+
+@user_passes_test(is_staff)
 def reports(request):
     reports = ReportUserModel.objects.all()
     return render(request, 'reports.html', {'reports': reports})
+
+
+
+
+#Announcement View
+#=======================================================================================================================
+def is_superadmin(user):
+    return user.is_superuser
+
+@user_passes_test(is_superadmin)
+def announcement(request):
+    latest_announcement = AnnouncementModel.objects.last()
+
+    if request.method == 'POST':
+        form = AnnouncementForm(request.POST, instance=latest_announcement)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        form = AnnouncementForm(instance=latest_announcement)
+
+    return render(request, 'announcement.html', {'form': form, 'announcement': latest_announcement})

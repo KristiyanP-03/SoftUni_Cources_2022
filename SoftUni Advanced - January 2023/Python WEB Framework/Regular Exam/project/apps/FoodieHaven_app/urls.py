@@ -22,5 +22,7 @@ urlpatterns = [
 
 
     path('kitchen/<int:pk>/report/', report_user, name='report_user'),
-    path('reporsts/', reports, name="reports")
+    path('reporsts/', reports, name="reports"),
+
+    path('announcement/', announcement, name="announcement")
 ]

@@ -98,3 +98,12 @@ class ReportUserForm(forms.ModelForm):
     class Meta:
         model = ReportUserModel
         fields = ['description']
+
+
+
+#Create Announcement Form
+#=======================================================================================================================
+class AnnouncementForm(forms.ModelForm):
+    class Meta:
+        model = AnnouncementModel
+        fields = ['message']

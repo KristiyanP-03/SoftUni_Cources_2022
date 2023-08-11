@@ -3,6 +3,17 @@
 
     <div id="fixing_top"></div>
 
+
+
+    {% if announcement and announcement.message != "" %}
+        <div class="announcement-tab">
+            <div class="announcement">{{ announcement.message }}</div>
+            <p>{{ announcement.created_at }}</p>
+        </div>
+    {% endif %}
+
+
+
     <div class="user_recepies_container">
         {% if recipes %}
             <div class="recipe_boxes">
