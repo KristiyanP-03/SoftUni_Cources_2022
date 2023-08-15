@@ -5,13 +5,13 @@ from django.contrib.auth.admin import GroupAdmin, UserAdmin
 from apps.FoodieHaven_app.models import *
 
 
-class ProfileModelAdmin(UserAdmin):  # Inherit from UserAdmin
+class ProfileModelAdmin(UserAdmin):
     list_filter = ['first_name', 'last_name']
     list_display = ['username', 'email', 'first_name', 'last_name', 'profile_picture']
     ordering = ['username']
     search_fields = ['username', 'email']
 
-    # Include permissions fields in fieldsets
+
     fieldsets = (
         ('Personal Information', {
             'fields': ('first_name', 'last_name', 'email')
@@ -19,7 +19,7 @@ class ProfileModelAdmin(UserAdmin):  # Inherit from UserAdmin
         ('Account Information', {
             'fields': ('username', 'password', 'profile_picture')
         }),
-        ('Permissions', {  # Include this section for permissions
+        ('Permissions', {
             'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')
         }),
     )

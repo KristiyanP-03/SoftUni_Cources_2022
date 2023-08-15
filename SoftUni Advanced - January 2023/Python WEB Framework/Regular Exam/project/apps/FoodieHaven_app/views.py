@@ -157,9 +157,16 @@ def recipe_details(request, pk):
 
 
 
-
+@login_required
 def recipe_edit(request, pk):
     recipe = get_object_or_404(RecipeModel, pk=pk)
+
+
+
+    if recipe.chef != request.user:
+        return redirect("index")
+
+
 
     if request.method == 'POST':
         form = RecipeForm(request.POST, instance=recipe)
