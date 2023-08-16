@@ -25,8 +25,6 @@ SECRET_KEY = 'django-insecure-l7u^y%&d)-t!u37@vqf)g@t!@9xmmakf)z(q3y&-n^=3zq-7ma
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -128,12 +126,3 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-
-
-
-
-DATE_INPUT_FORMATS = ["%d.%m.%Y"]
-DATE_FORMAT = "d.m.Y"
-USE_L10N = False
