@@ -106,7 +106,76 @@ function Math_Operations(num_1, num_2, operation){
 */
 
 // 6. Largest Number
+/*
+function Largest_Number(...numbers) {
+    let largest_number = -Infinity;
 
-function Largest_Number(){
-    
+    numbers.forEach((number) => {
+        if (number > largest_number) {
+            largest_number = number;
+        }
+    });
+
+    console.log(`The largest number is ${largest_number}.`);
 }
+*/
+
+// 7. Theatre Promotions
+/*
+function Theatre_Promotions(type_of_the_day, age) {
+    let output = NaN;
+
+    switch (type_of_the_day) {
+
+        case "Weekday":
+            if (0 <= age && age <= 18) {
+                output = "12$";
+            } else if (18 < age && age <= 64) {
+                output = "18$";
+            } else if (64 < age && age <= 122) {
+                output = "12$";
+            } else {
+                output = "Error!";
+            }
+            break;
+
+
+
+        case "Weekend":
+            if (0 <= age && age <= 18) {
+                output = "15$";
+            } else if (18 < age && age <= 64) {
+                output = "20$";
+            } else if (64 < age && age <= 122) {
+                output = "15$";
+            } else {
+                output = "Error!";
+            }
+            break;
+
+
+
+        case "Holiday":
+            if (0 <= age && age <= 18) {
+                output = "5$";
+            } else if (18 < age && age <= 64) {
+                output = "12$";
+            } else if (64 < age && age <= 122) {
+                output = "10$";
+            } else {
+                output = "Error!";
+            }
+            break;
+
+
+
+        default:
+            output = "Error!";
+            break;
+    }
+
+    console.log(output);
+}
+*/
+
+// 8. Circle Area
