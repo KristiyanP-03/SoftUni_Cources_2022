@@ -179,3 +179,6 @@ function Theatre_Promotions(type_of_the_day, age) {
 */
 
 // 8. Circle Area
+function Circle_Area(){
+    
+}
