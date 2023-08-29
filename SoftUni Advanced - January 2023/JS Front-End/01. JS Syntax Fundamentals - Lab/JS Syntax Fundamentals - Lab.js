@@ -179,6 +179,123 @@ function Theatre_Promotions(type_of_the_day, age) {
 */
 
 // 8. Circle Area
-function Circle_Area(){
-    
+/*
+function Circle_Area(input){
+    if(typeof(input) != "number"){
+        console.log(`We can not calculate the circle area, because we receive a ${typeof(input)}.`)
+    }
+    else{
+        let result = Math.PI * Math.pow(input, 2);
+
+        console.log(result.toFixed(2))
+    }
 }
+*/
+
+
+//9. Numbers from 1 to 5
+/*
+function Numbers_from_1_to_5(){
+    for (let index = 1; index <= 5; index++) {
+        console.log(index);        
+    }
+}
+*/
+
+//10. Numbers from M to N
+/*
+function Numbers_from_M_to_N(m, n){
+    for (let index = m; index >= n; index--) {
+        console.log(index);
+    }
+}
+*/
+
+//11. Sum First and Last Array Elements
+/*
+function Sum_First_and_Last_Array_Elements(the_array){
+    let first_element = the_array[0];
+    let last_element = the_array[the_array.length - 1];
+
+    let result = first_element + last_element;
+
+    console.log(result)
+}
+*/
+
+//12. Reverse an Array of Numbers
+/*
+function Reverse_an_Array_of_Numbers(n, the_array) {
+    if (n > the_array.length) {
+        n = the_array.length;
+    }
+
+    let output = [];
+    
+    for (let index = n - 1; index >= 0; index--) {
+        output.push(the_array[index]);
+    }
+
+    console.log(output.join(" "));
+}
+*/
+
+//13. Even and Odd Subtraction
+/*
+function Even_and_Odd_Subtraction(the_array) {
+    let even_sum = 0;
+    let odd_sum = 0;
+
+    for (let index = 0; index < the_array.length; index++) {
+        if (the_array[index] % 2 === 0) {
+            even_sum += the_array[index];
+        } else {
+            odd_sum += the_array[index];
+        }
+    }
+
+    let result = even_sum - odd_sum;
+
+    console.log(result);
+}
+*/
+
+//14. Substring
+/*
+function Substring(string, start_index, end_index) {
+    const result = string.substring(start_index, start_index + end_index);
+
+  console.log(result);
+}
+*/
+
+//15. Censored Words
+/*
+function Censored_Words(text, word) {
+    const pattern = new RegExp(word, 'g');
+    
+    const result = text.replace(pattern, '*'.repeat(word.length));
+    
+    return result;
+}
+*/
+
+//16. Count String Occurrences
+/*
+function Count_String_Occurrences(text, word) {
+    const lowerText = text.toLowerCase();
+    const lowerWord = word.toLowerCase();
+  
+    const words = lowerText.split(' ');
+  
+    let count = 0;
+  
+    for (const w of words) {
+      if (w === lowerWord) {
+        count++;
+      }
+    }
+  
+    return count;
+}
+*/
