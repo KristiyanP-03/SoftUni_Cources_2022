@@ -114,3 +114,16 @@ function Vacation(group_of_people, type_of_the_group, day_of_the_week){
     
 } 
 */
+
+//3. Leap Year
+/*
+function Leap_Year(year) {
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    return "yes";
+  } else {
+    return "no";
+  }
+}
+*/
+
+//4. Print And Sum
