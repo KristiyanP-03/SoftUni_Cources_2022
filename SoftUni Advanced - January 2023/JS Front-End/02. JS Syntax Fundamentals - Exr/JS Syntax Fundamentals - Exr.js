@@ -127,3 +127,149 @@ function Leap_Year(year) {
 */
 
 //4. Print And Sum
+/*
+function Print_And_Sum(start, end){
+    let sum = 0;
+    let printable_array = [];
+
+    for (let index = start; index <= end; index++) {
+        sum = sum + index;
+        printable_array.push(index)
+    }
+
+    console.log(printable_array.join(' '));
+    console.log(`Sum: ${sum}`)
+}
+*/
+
+//5. Multiplication Table
+/*
+function Multiplication_Table(number){
+    for (let index = 1; index <= 10; index++) {
+        console.log(`${number} X ${index} = ${number * index}`);
+    }
+}
+*/
+
+//6. Sum Digits
+/*
+function Sum_Digits(number) {
+    let string = number.toString();
+    let char_by_char_array = string.split('');
+    let sum = 0;
+
+    for (let index = 0; index < char_by_char_array.length; index++) {
+        sum = sum + parseInt(char_by_char_array[index])
+    }
+    console.log(sum)
+}
+*/
+
+//7. Chars to String
+/*
+function Chars_to_String(char1, char2, char3) {
+    console.log(char1 + char2 + char3)
+}
+*/
+
+//8. Reversed Chars
+/*
+function Reversed_Chars(char1, char2, char3) {
+    console.log(char3 + ' ' + char2 + ' ' + char1)
+}
+*/
+
+//9. Fruit
+/*
+function Fruit(fruit, weightInGrams, pricePerKilogram){
+    const weightInKilograms = weightInGrams / 1000;
+
+    const money = (weightInKilograms * pricePerKilogram).toFixed(2);
+
+    console.log(`I need $${money} to buy ${weightInKilograms.toFixed(2)} kilograms ${fruit}.`);
+}
+*/
+
+//10. Same Numbers
+/*
+function Same_Numbers(number){
+    const numberString = number.toString();
+
+    const firstDigit = Number(numberString[0]);
+        let sumOfDigits = 0;
+    
+    for (let i = 0; i < numberString.length; i++) {
+        const currentDigit = Number(numberString[i]);
+    
+        sumOfDigits += currentDigit;
+    }
+    
+    const allDigitsSame = numberString.split('').every(digit => digit === numberString[0]);
+    
+    console.log(allDigitsSame);
+    console.log(sumOfDigits);
+}
+*/
+
+//11. Road Radar
+/*
+function Road_Radar(speed, area) {
+
+    const speedLimits = {
+        motorway: 130,
+        interstate: 90,
+        city: 50,
+        residential: 20
+    };
+
+    if (!speedLimits.hasOwnProperty(area)) {
+        console.log('Invalid area');
+        return;
+    }
+
+    const speedLimit = speedLimits[area];
+    const difference = speed - speedLimit;
+
+    let status = '';
+
+    if (difference <= 0) {
+        status = `Driving ${speed} km/h in a ${speedLimit} zone`;
+    } else if (difference <= 20) {
+        status = `The speed is ${difference} km/h faster than the allowed speed of ${speedLimit} - speeding`;
+    } else if (difference <= 40) {
+        status = `The speed is ${difference} km/h faster than the allowed speed of ${speedLimit} - excessive speeding`;
+    } else {
+        status = `The speed is ${difference} km/h faster than the allowed speed of ${speedLimit} - reckless driving`;
+    }
+
+    console.log(status);
+}
+*/
+
+//12. Cooking by Numbers
+/*
+function Cooking_by_Numbers(stringed_number, ...list_of_oprs) {
+    let number = parseInt(stringed_number);
+
+    for (let operation of list_of_oprs) {
+        switch (operation) {
+            case 'chop':
+                number /= 2;
+                break;
+            case 'dice':
+                number = Math.sqrt(number);
+                break;
+            case 'spice':
+                number += 1;
+                break;
+            case 'bake':
+                number *= 3;
+                break;
+            case 'fillet':
+                number *= 0.8;
+                break;
+        }
+        console.log(number);
+    }
+}
+*/
