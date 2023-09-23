@@ -11,3 +11,18 @@ function createPerson(firstName, lastName, age) {
 }
 */
 
+//2. City
+/*
+function Info(object) {
+  const matrix = Object.entries(object);
+
+  for (let currentArrayIndex = 0; currentArrayIndex < matrix.length; currentArrayIndex++) {
+    let key = matrix[currentArrayIndex][0];
+    let value = matrix[currentArrayIndex][1];
+
+    console.log(`${key} -> ${value}`);
+  }
+}
+*/
+
+//
