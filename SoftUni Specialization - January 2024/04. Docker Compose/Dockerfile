@@ -1,4 +1,9 @@
-FROM alpine
+FROM node:16
 
-ENTRYPOINT ["echo", "Author:" ]
-CMD ["user"]
+WORKDIR /FirstVueJSProject/app
+
+COPY . .
+
+RUN npm install
+
+CMD ["npm", "run", "dev"]
