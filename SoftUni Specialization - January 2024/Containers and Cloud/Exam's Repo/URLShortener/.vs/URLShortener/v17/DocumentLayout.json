@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Repositories\\URLShortener\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D94D40CC-FFBA-4449-982B-CD8C3AD93AA6}|URLShortener\\URLShortener.csproj|d:\\repositories\\urlshortener\\urlshortener\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D94D40CC-FFBA-4449-982B-CD8C3AD93AA6}|URLShortener\\URLShortener.csproj|solutionrelative:urlshortener\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Repositories\\URLShortener\\URLShortener\\appsettings.json",
+              "RelativeDocumentMoniker": "URLShortener\\appsettings.json",
+              "ToolTip": "D:\\Repositories\\URLShortener\\URLShortener\\appsettings.json",
+              "RelativeToolTip": "URLShortener\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-02-18T12:12:25.775Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

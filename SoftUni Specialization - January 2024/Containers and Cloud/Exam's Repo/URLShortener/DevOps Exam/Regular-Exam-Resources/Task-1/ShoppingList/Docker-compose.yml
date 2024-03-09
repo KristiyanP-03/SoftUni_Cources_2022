@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: max
+      MONGO_INITDB_ROOT_PASSWORD: secret
+    volumes:
+      - data:/data/db
+    networks:
+      - shoppinglist
+
+  backend:
+    # build:
+    #   context: ./backend
+    image: kristiyanpisev/shoppinglist-be
+    container_name: backend
+    ports:
+      - "80:80"
+    volumes:
+      - logs:/logs
+      - node_modules:/node_modules
+    networks:
+      - shoppinglist
+
+  frontend:
+    # build:
+    #     context: ./frontend
+    image: kristiyanpisev/shoppinglist-fe
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/src:/src
+      - ./frontend/src:/backend/src
+    networks:
+      - shoppinglist
+
+volumes:
+  data:
+  logs:
+  node_modules:
+
+networks:
+  shoppinglist:
+    external: true
