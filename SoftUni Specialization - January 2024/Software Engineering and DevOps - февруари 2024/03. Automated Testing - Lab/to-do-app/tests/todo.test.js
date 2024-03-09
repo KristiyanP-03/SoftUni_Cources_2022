@@ -9,7 +9,7 @@ test('user can add a task', async ({ page }) => {
 
     await page.click('#add-task');
 
-    const taskText = await page.textContent('task');
+    const taskText = await page.textContent('.task');
 
     expect(taskText).toContain('Test Task');
 });
@@ -19,7 +19,7 @@ test('user can add a task', async ({ page }) => {
 // Verify if a user can delete a task
 test('user can delete a task', async ({ page }) => {
     // Add a task
-    await page-goto('http://localhost:5500/');
+    await page.goto('http://localhost:5500/');
     await page.fill('#task-input', 'Test Task');
     await page.click('#add-task');
 
@@ -35,7 +35,7 @@ test('user can delete a task', async ({ page }) => {
 // Verify if a user can mark a task as complete
 test('user can mark a task as complete', async ({ page }) => {
     // Add a task
-    await page-goto('http://localhost:5500/');
+    await page.goto('http://localhost:5500/');
     await page.fill('#task-input', 'Test Task');
     await page.click('#add-task');
 
@@ -55,7 +55,7 @@ test('user can filter tasks', async ({ page }) => {
     await page.click('#add-task');
 
     // Mark the task as complete
-    await page.click('.task task-complete');
+    await page.click('.task .task-complete');
 
     // Filter tasks
     await page.selectOption('#filter', 'Completed');
