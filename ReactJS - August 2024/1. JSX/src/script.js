@@ -23,7 +23,7 @@ const headerJSX = (
    // и в package.json 
    /*
    "scripts": {
-      "build": "npx babel --watch src --out-dir build --preset react-app/prod"
+      "build": "npx babel --watch src --out-dir build --presets react-app/prod"
    },
    */
    //"terminal": npm run build
