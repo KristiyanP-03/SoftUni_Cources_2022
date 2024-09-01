@@ -1,0 +1,35 @@
+.allRecipes {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 300px;
+    position: relative;
+    border-bottom: 3px dotted #383838;
+}
+
+
+
+.allRecipes-info img {
+    margin-top: 10px;
+    height: 200px;
+    width: 200px;
+
+}
+
+
+
+.details-button {
+    color: #242424;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.details-button:hover {
+    color: #e24901;
+}

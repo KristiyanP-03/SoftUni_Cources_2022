@@ -1,0 +1,86 @@
+.gotvach {
+    color: #a2c201;
+  }
+  
+  .bg {
+    margin-left: -6px;
+    color: #e24901;
+  }
+  
+
+header {
+    background-color: #29303c;
+    overflow: hidden;
+    color: white;
+    margin-left: -40px;
+    margin-right: -32px;
+}
+
+footer {
+    background-color: #29303c;
+    overflow: hidden;
+    color: white;
+    text-align: left;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 0.6rem;
+    z-index: 1000;
+    margin: 0; 
+}
+
+
+.home {
+    font-size: auto;
+}
+
+header {
+    position: relative;
+}
+
+header h1 {
+    display: inline-block;
+    background-color: #29303c;
+    color: white;
+    margin-bottom: auto;
+}
+
+header nav {
+    font-size: auto;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    margin-left: 500px;
+    right: 0;
+    bottom: 8px;
+}
+
+header nav>* {
+    float: left;
+}
+
+footer {
+    padding: 0.5em;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+nav a {
+    margin: 0 0.5em;
+}
+
+nav a:hover {
+    cursor: pointer;
+    color: #e24901;
+    font-weight: bolder;
+}
+
+
+#user,
+#guest {
+    margin: 0;
+    padding: 0;
+}

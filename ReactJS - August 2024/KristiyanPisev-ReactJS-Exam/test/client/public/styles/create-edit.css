@@ -1,0 +1,35 @@
+#create-page,
+#edit-page {
+    margin-left: 220px;
+    position: relative;
+    width: 800px;
+    height: auto;
+    padding: 40px;
+    padding-top: 0px;
+    margin-bottom: -10px;
+    box-sizing: border-box;
+    text-align: center;
+    background: #29303c;
+}
+
+input[type="text"] {
+    background: #ecf0f3;
+    padding: 30px;
+    padding-left: 20px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+textarea {
+    width: 100%;
+    min-width: 20vw;
+    min-height: 7em;
+    border: 2px solid #86a480;
+    font-size: 26px;
+    border-bottom-color: #ecf0f3;
+    background-color: #ecf0f3;
+    border-right-color: #ecf0f3;
+    margin-top: 7px;
+    color: black;
+}

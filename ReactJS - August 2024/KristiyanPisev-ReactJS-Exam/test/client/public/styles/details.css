@@ -1,0 +1,119 @@
+.info-section {
+    position: relative;
+    width: 100%;
+    background-blend-mode: multiply;
+    z-index: 2;
+    border-radius: 10px;
+    background-color: #fdfdfd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.recipe-header {
+    position: relative;
+    padding: 25px;
+    background-color: #fff4e6;
+    border-bottom: 2px solid #f5c19b;
+    display: flex;
+    align-items: center;
+}
+
+.recipe-header > h1 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.recipe-header > h4 {
+    color: #777;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 100px;
+    margin-bottom: 0;
+    margin-left: -300px;
+}
+
+.levels {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    padding: 7px 12px;
+    border-radius: 5px;
+    background-color: #ff7f50;
+    font-size: 14px;
+}
+
+.type {
+    display: inline-block;
+    color: #333;
+    font-size: 16px;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.recipe-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-section .text {
+    padding: 20px 30px;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.recipe-summary {
+    padding: 20px 30px;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    background-color: #fff4e6;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-summary p {
+    margin-bottom: 10px;
+}
+
+.movie_social {
+    padding: 20px 15px;
+    text-align: center;
+    background-color: #f7f7f7;
+    border-top: 2px solid #f5c19b;
+    font-size: 1.4rem;
+    color: #777;
+}
+
+.buttons {
+    padding: 20px 15px;
+    text-align: right;
+    background-color: #fff;
+}
+
+.button {
+    background-color: #ff7f50;
+    padding: 12px 25px;
+    margin-top: auto;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #a2c201;
+    color: white;
+}
+
