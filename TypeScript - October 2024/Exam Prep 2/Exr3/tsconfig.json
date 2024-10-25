@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es2022",                                 
+    "module": "commonjs",
+    "rootDir": "./src",        
+    "outDir": "./dist",
+  }
+}
+
+//tsc; node dist/index.js
